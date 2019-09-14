@@ -1,0 +1,20 @@
+<h3>List of Contacts</h3>
+<hr>
+<div class="list-group">
+
+    <div *ngFor="let c of contacts" class="list-group-item m-3 alert">
+        <div class="row"  [routerLink]="['/contact-details',c.id]" style="cursor: pointer">
+            <div>
+            <div class="col-sm-4">
+                <img [src]="c.picture" alt="c.firstname" style="height:100px">
+            </div>
+            <div class="col-sm-8">
+                <h5>{{c | fullname}} </h5>
+                <p>{{c.city}}, {{c.state}}</p>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+
+<button class="btn-primary" (click)="loadMore()">Load more...</button>
