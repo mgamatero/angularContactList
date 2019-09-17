@@ -49,7 +49,14 @@ export class ContactDetailComponent implements OnInit {
       this.api.deleteContact(this.contact.id).subscribe(()=>{
         this.router.navigate(['/contact-list']);
       })
-   
-   
   }
+
+  updateContact(){
+    this.api.getContactDetails(this.contact.id).subscribe(data=>{
+      this.contact = data
+      console.log(data)
+    }
+    )
+  }
+  
 }

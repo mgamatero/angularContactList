@@ -12,7 +12,8 @@ import { FullnamePipe } from './pipes/fullname.pipe';
 import { AgePipe } from './pipes/age.pipe';
 import { ContactListComponent } from './components/contact-list/contact-list.component';
 import { AddContactComponent } from './components/add-contact/add-contact.component';
-import { FormsModule} from '@angular/forms';
+import { FormsModule,ReactiveFormsModule} from '@angular/forms';
+import { EditContactComponent } from './components/edit-contact/edit-contact.component';
 
 const routes: Routes = [
   {
@@ -33,6 +34,10 @@ const routes: Routes = [
     component: ContactDetailComponent
   },
   {
+    path: 'edit-contact/:id',
+    component: EditContactComponent
+  },
+  {
     path: 'addContact',
     component: AddContactComponent
   }
@@ -48,12 +53,14 @@ const routes: Routes = [
     FullnamePipe,
     AgePipe,
     ContactListComponent,
-    AddContactComponent
+    AddContactComponent,
+    EditContactComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(routes)
   ],
   providers: [],

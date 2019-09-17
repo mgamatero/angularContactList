@@ -2,15 +2,15 @@
   "contacts": [
     {
       "id": 5,
-      "firstname": "Jodie",
+      "firstname": "Jodester",
       "lastname": "Chestnutt",
+      "gender": "Male",
       "email": "jchestnutt4@desdev.cn",
       "phone": "813-813-2847",
-      "gender": "Male",
-      "dob": "1974-11-11",
       "city": "Tampa",
       "state": "Florida",
       "country": "United States",
+      "dob": "1974-11-11",
       "picture": "http://kvinod.com/old_ci/randomdata/images/men/5.jpg"
     },
     {
